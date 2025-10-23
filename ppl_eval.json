@@ -1,0 +1,33 @@
+{
+    "time": 1761219696.037369,
+    "results": [
+        {
+            "model_dir": "out-shakespeare-char-mps-2L-2H",
+            "perplexity": 42.397518157958984
+        },
+        {
+            "model_dir": "out-shakespeare-char-mps-2L-4H",
+            "perplexity": 35.18771743774414
+        },
+        {
+            "model_dir": "out-shakespeare-char-mps-4L-2H",
+            "perplexity": 37.99818420410156
+        },
+        {
+            "model_dir": "out-shakespeare-char-mps-4L-4H",
+            "perplexity": 37.46849060058594
+        },
+        {
+            "model_dir": "out-shakespeare-char-mps-4L-8H",
+            "perplexity": 25.796981811523438
+        },
+        {
+            "model_dir": "out-shakespeare-char-mps-8L-4H",
+            "perplexity": 31.81427764892578
+        },
+        {
+            "model_dir": "out-shakespeare-char-mps-8L-8H",
+            "perplexity": 13.938804626464844
+        }
+    ]
+}

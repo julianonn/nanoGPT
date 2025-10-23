@@ -284,7 +284,10 @@ while True:
                 }
                 print(f"saving checkpoint to {out_dir}")
                 torch.save(checkpoint, os.path.join(out_dir, 'ckpt.pt'))
-    if iter_num == 0 and eval_only:
+    # if iter_num == 0 and eval_only:
+    if eval_only:
+        losses = estimate_loss()
+        print(f"step {iter_num}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
         break
 
     # forward backward update, with optional gradient accumulation to simulate larger batch size
