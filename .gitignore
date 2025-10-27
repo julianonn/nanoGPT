@@ -13,3 +13,9 @@ venv/
 
 
 out-shakespeare-char-*
+out-emma-char-*
+
+eval_emma_1200.json
+eval_emma_badppl.json
+.gitignore
+eval_emma.json

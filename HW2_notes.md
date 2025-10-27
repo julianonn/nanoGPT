@@ -25,7 +25,10 @@ See `q2_evaluation.py`. Usage: `python3 q2_evaluation.py`
 This script dumps KL divergence and Perplexity outputs to  `kl_eval.json` and `ppl_eval.json` respectively.
 
 
-### Dataset
-Jane Austen's Emma from Project Gutenberg ([https://www.gutenberg.org/ebooks/158]). See `data/jane_austen_emma/emma.txt` for cleaned dataset. Run `python data/jane_austen_emma/prepare.py` to generate train and test sets, and `q2_finetune.py` for finetuning scripts.
+### 2.5 Dataset
+Jane Austen's Emma from Project Gutenberg ([https://www.gutenberg.org/ebooks/158]). See `data/jane_austen_emma/emma.txt` for cleaned dataset. Run `python data/jane_austen_emma/prepare.py` to generate train and test sets (by sampling 100%, 75%, ), and `q2_finetune.py` for finetuning scripts.
+
+
+
 
 

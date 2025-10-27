@@ -1,33 +1,61 @@
 {
-    "time": 1761219696.037369,
+    "time": 1761227966.0255492,
     "results": [
         {
             "model_dir": "out-shakespeare-char-mps-2L-2H",
-            "perplexity": 42.397518157958984
+            "steps": 3450,
+            "train_loss": 1.4212,
+            "val_loss": 1.6205,
+            "train_ppl": 4.14208796469826,
+            "val_ppl": 5.055617493463725
         },
         {
             "model_dir": "out-shakespeare-char-mps-2L-4H",
-            "perplexity": 35.18771743774414
+            "steps": 2550,
+            "train_loss": 1.4702,
+            "val_loss": 1.6617,
+            "train_ppl": 4.350105075081455,
+            "val_ppl": 5.268259276894958
         },
         {
             "model_dir": "out-shakespeare-char-mps-4L-2H",
-            "perplexity": 37.99818420410156
+            "steps": 2050,
+            "train_loss": 1.4226,
+            "val_loss": 1.6373,
+            "train_ppl": 4.147890948990021,
+            "val_ppl": 5.141269328244395
         },
         {
             "model_dir": "out-shakespeare-char-mps-4L-4H",
-            "perplexity": 37.46849060058594
+            "steps": 1700,
+            "train_loss": 1.4331,
+            "val_loss": 1.6376,
+            "train_ppl": 4.1916732588318535,
+            "val_ppl": 5.142811940423125
         },
         {
             "model_dir": "out-shakespeare-char-mps-4L-8H",
-            "perplexity": 25.796981811523438
+            "steps": 750,
+            "train_loss": 1.7445,
+            "val_loss": 1.899,
+            "train_ppl": 5.723039240302005,
+            "val_ppl": 6.679211889670174
         },
         {
             "model_dir": "out-shakespeare-char-mps-8L-4H",
-            "perplexity": 31.81427764892578
+            "steps": 750,
+            "train_loss": 1.6211,
+            "val_loss": 1.7857,
+            "train_ppl": 5.058651774152981,
+            "val_ppl": 5.963753113983731
         },
         {
             "model_dir": "out-shakespeare-char-mps-8L-8H",
-            "perplexity": 13.938804626464844
+            "steps": 300,
+            "train_loss": 2.2219,
+            "val_loss": 2.2498,
+            "train_ppl": 9.224841424290158,
+            "val_ppl": 9.48583847893332
         }
     ]
 }
