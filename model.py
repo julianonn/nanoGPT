@@ -302,13 +302,17 @@ class GPT(nn.Module):
         mfu = flops_achieved / flops_promised
         return mfu
 
-    @torch.no_grad()
-    def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None):
+    # @torch.no_grad()
+    def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None,
+                 return_log_probs=False):
         """
         Take a conditioning sequence of indices idx (LongTensor of shape (b,t)) and complete
         the sequence max_new_tokens times, feeding the predictions back into the model each time.
         Most likely you'll want to make sure to be in model.eval() mode of operation for this.
         """
+
+        log_probs_list = [] if return_log_probs else None
+
         for _ in range(max_new_tokens):
             # if the sequence context is growing too long we must crop it at block_size
             idx_cond = idx if idx.size(1) <= self.config.block_size else idx[:, -self.config.block_size:]
@@ -326,5 +330,13 @@ class GPT(nn.Module):
             idx_next = torch.multinomial(probs, num_samples=1)
             # append sampled index to the running sequence and continue
             idx = torch.cat((idx, idx_next), dim=1)
+            if return_log_probs:
+                # Gather log-prob of sampled token
+                log_prob = torch.log(probs.gather(-1, idx_next))
+                log_probs_list.append(log_prob.squeeze(-1))
 
+        if return_log_probs:
+            log_probs = torch.cat(log_probs_list, dim=-1).squeeze(0)
+            return idx, log_probs
+            
         return idx
